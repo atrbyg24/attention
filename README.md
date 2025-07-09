@@ -1,4 +1,5 @@
 GPT Model Implementation
+
 This repository contains a basic implementation of a Generative Pre-trained Transformer (GPT) model using PyTorch. The model is designed to demonstrate the core components of a transformer architecture, including multi-headed self-attention and feed-forward neural networks.
 
 Features
