@@ -28,25 +28,25 @@ The GPT class can be instantiated and used for sequence generation tasks. Here's
 import torch
 from gpt import GPT # Assuming gpt.py is in the same directory
 
-# Device configuration
+Device configuration
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-# Model parameters (example values)
+Model parameters (example values)
 vocab_size = 10000  # Size of your vocabulary
 context_length = 256 # Maximum sequence length
 model_dim = 512     # Dimension of the model
 num_blocks = 6      # Number of transformer blocks
 num_heads = 8       # Number of attention heads
 
-# Instantiate the GPT model
+Instantiate the GPT model
 model = GPT(vocab_size, context_length, model_dim, num_blocks, num_heads).to(device)
 
-# Example input: a batch of sequences
-# Each sequence is a tensor of token IDs
+Example input: a batch of sequences
+Each sequence is a tensor of token IDs
 batch_size = 4
 example_input = torch.randint(0, vocab_size, (batch_size, context_length)).to(device)
 
-# Forward pass
+Forward pass
 output = model(example_input)
 
 print("Output shape:", output.shape)
